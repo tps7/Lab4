@@ -97,6 +97,7 @@ public class Colosseum {
             int defense = myScan.nextInt();
             if (defense > MAX_HIT_POINTS - 1 - tempPokemon.attackLevel || defense < 1) {
                 System.out.println("error restart");
+                continue;
             } else {
                 tempPokemon.defenseLevel = defense;
             }
@@ -142,7 +143,7 @@ public class Colosseum {
         if (firstPokemon.hitPoints < 1) {
             System.out.println(secondPokemon.name + (" won"));
         } else if (secondPokemon.hitPoints < 1) {
-            System.out.println(firstPokemon + (" won"));
+            System.out.println(firstPokemon.name + (" won"));
         }
     }
 
